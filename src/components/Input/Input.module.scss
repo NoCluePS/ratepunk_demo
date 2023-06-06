@@ -33,6 +33,7 @@
         color: white;
         font-family: 'Noto Sans', sans-serif;
         font-size: 20px;
+        border-left: 1px solid #1F343E;
 
         &:active { border-style: none;}
     }
@@ -62,6 +63,19 @@
     }
 }
 
+.successContainer {
+    display: flex;
+    align-items: center;
+    
+    img {
+        margin-right: 16px;
+    }
+}
+
 .marginLeft {
     margin-left: 20px;
+}
+
+.disabled {
+    color: #6D7A80;
 }
