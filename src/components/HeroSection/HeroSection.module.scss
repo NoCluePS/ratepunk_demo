@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 64px;
+
+    .container {
+        max-width: 940px;
+        width: 100%;
+        margin: 0 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .emailContainer {
+            background-color: #F8F4F9;
+            border: 1px solid #1F343E;
+            border-radius: 16px;
+            padding: 64px;
+            width: 100%;
+            max-width: 544px;
+            color: #1F343E;
+
+            h1 {
+                margin: 0 0 32px 0;
+                line-height: 72px;
+                font-size: 48px;
+                font-family: 'Caveat Brush', cursive;
+            }
+
+            p {
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 20px;
+                line-height: 32px;
+                margin: 0 0 40px 0;
+            }
+        }
+    }   
+}

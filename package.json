@@ -21,5 +21,13 @@
     "sass": "^1.62.1",
     "scss": "^0.2.4",
     "typescript": "5.1.3"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/NoCluePS/ratepunk_demo.git",
+  "license": "MIT",
+  "devDependencies": {
+    "stylelint": "^15.7.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-standard-scss": "^9.0.0"
   }
 }
