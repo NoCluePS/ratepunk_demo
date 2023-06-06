@@ -2,18 +2,47 @@
 
 .container {
     background-color: white;
-    padding: 25px 20px;
     display: flex;
     align-items: center;
     gap: 20px;
     border: 1px solid #1F343E;
     border-radius: 8px;
-
+    max-height: 75px;
+    
     input {
         border: none;
         font-size: 20px;
         width: 100%;
+        padding: 25px 0;
+        border-radius: 8px;
     }
+
+    img {
+        padding: 0 0 0 20px;
+    }
+
+    .copyBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 96px;
+        height: 75px;
+        background-color: #4EB3E3;
+        border-radius: 0 8px 8px 0;
+        color: white;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+
+        &:active { border-style: none;}
+    }
+}
+
+.failureText {
+    color: #ED6F82;
+    font-size: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 7px;
 }
 
 .submitBtn {
@@ -31,4 +60,8 @@
     &:hover {
         opacity: 0.9;
     }
+}
+
+.marginLeft {
+    margin-left: 20px;
 }

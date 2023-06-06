@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Noto+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 .content {
     display: flex;
@@ -31,7 +30,7 @@
                 font-family: 'Caveat Brush', cursive;
             }
 
-            p {
+            .paragraph {
                 font-family: 'Noto Sans', sans-serif;
                 font-size: 20px;
                 line-height: 32px;
