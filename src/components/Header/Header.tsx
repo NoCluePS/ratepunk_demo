@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import classNames from "classnames";
-import logoSrc from "../../../public/assets/logo.svg";
-import menuOpenSrc from "../../../public/assets/menu.svg";
-import menuClosedSrc from "../../../public/assets/close.svg";
+import logoSrc from '@/assets/logo.svg';
+import menuOpenSrc from '@/assets/menu.svg';
+import menuClosedSrc from '@/assets/close.svg';
 import styles from "./Header.module.scss";
 
 export const Header = () => {

@@ -1,9 +1,10 @@
 import React, { FC, useState } from "react";
 import Image from "next/image";
 import classNames from 'classnames';
-import emailLogoSrc from '../../../public/assets/email.svg';
-import successImgSrc from '../../../public/assets/success.svg';
+import emailLogoSrc from '@/assets/email.svg';
+import successImgSrc from '@/assets/success.svg';
 import styles from './Input.module.scss';
+import { boldPFont, pFont } from '@/Fonts/Fonts';
 
 interface InputProps {
   showCopy: boolean;
@@ -27,11 +28,11 @@ export const Input: FC<InputProps> = ({
   };
 
   return (
-    <div>
+    <div className={pFont.className}>
       {showCopy && (
         <div className={styles.successContainer}>
           <Image src={successImgSrc} alt="Success image" />
-          <p>Your email is confirmed!</p>
+          <p className={boldPFont.className}>Your email is confirmed!</p>
         </div>
       )}
       <p className={styles.failureText}>{failureText}</p>

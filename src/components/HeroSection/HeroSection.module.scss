@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
-
 .content {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 64px;
+    padding-bottom: 64px;
 
     .container {
-        max-width: 940px;
+        max-width: 1100px;
         width: 100%;
         margin: 0 16px;
         display: flex;
@@ -27,15 +26,63 @@
                 margin: 0 0 32px 0;
                 line-height: 72px;
                 font-size: 48px;
-                font-family: 'Caveat Brush', cursive;
             }
 
             .paragraph {
-                font-family: 'Noto Sans', sans-serif;
                 font-size: 20px;
                 line-height: 32px;
                 margin: 0 0 40px 0;
             }
+
+            .inputContainer {
+                margin-bottom: 107px;
+            }
+
+            .footerText {
+                margin: 0;
+                color: #6D7A80;
+                font-size: 16px;
+            }
+        }
+
+        .infoContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .infoSection {
+                display: flex;
+                align-items: center;
+                max-width: 448px;
+                margin-bottom: 30px;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                img {
+                    margin-right: 56px;
+                }
+
+                h1 {
+                    color: #4EB3E3;
+                    font-size: 20px;
+                }
+
+                h2 {
+                    color: #1F343E;
+                    font-size: 32px;
+                }
+            }
         }
     }   
+}
+
+.inverted {
+    flex-direction: row-reverse;
+
+    img {
+        margin-left: 56px;
+        margin-right: 0 !important;
+    }
 }
