@@ -7,11 +7,6 @@ export const headerFont = Caveat_Brush({
 });
 export const pFont = Noto_Sans({
   subsets: ['latin'],
-  weight: '400',
-  style: 'normal',
-});
-export const boldPFont = Noto_Sans({
-  subsets: ['latin'],
-  weight: '700',
+  weight: ['200', '400', '700'],
   style: 'normal',
 });

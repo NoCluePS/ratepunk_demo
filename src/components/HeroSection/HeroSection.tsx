@@ -6,7 +6,7 @@ import Image from 'next/image';
 import classNames from 'classnames';
 import styles from './HeroSection.module.scss';
 import { Input } from '@/components/Input/Input';
-import { boldPFont, headerFont, pFont } from '@/Fonts/Fonts';
+import { headerFont, pFont } from '@/Fonts/Fonts';
 import firstImg from '@/assets/invite.svg';
 import secondImg from '@/assets/collect-coins.svg';
 import thirdImg from '@/assets/voucher.svg';
@@ -99,7 +99,9 @@ export const HeroSection = () => {
             >
               <Image width={144} alt={`${title} imag`} src={image} />
               <div className={styles.stepContent}>
-                <h1 className={boldPFont.className}>STEP {i + 1}</h1>
+                <h1 className={classNames(styles.bold, pFont.className)}>
+                  STEP {i + 1}
+                </h1>
                 <h2 className={headerFont.className}>{title}</h2>
                 <p className={pFont.className}>{desc}</p>
               </div>

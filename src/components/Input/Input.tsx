@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import emailLogoSrc from '@/assets/email.svg';
 import successImgSrc from '@/assets/success.svg';
 import styles from './Input.module.scss';
-import { boldPFont, pFont } from '@/Fonts/Fonts';
+import { pFont } from '@/Fonts/Fonts';
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 interface InputProps {
@@ -34,7 +34,9 @@ export const Input: FC<InputProps> = ({
       {showCopy && (
         <div className={styles.successContainer}>
           <Image src={successImgSrc} alt="Success image" />
-          <p className={boldPFont.className}>Your email is confirmed!</p>
+          <p className={classNames(styles.bold, pFont.className)}>
+            Your email is confirmed!
+          </p>
         </div>
       )}
       <p className={styles.failureText}>{failureText}</p>
