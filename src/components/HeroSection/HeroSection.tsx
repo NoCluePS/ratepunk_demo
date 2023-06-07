@@ -10,6 +10,7 @@ import { boldPFont, headerFont, pFont } from '@/Fonts/Fonts';
 import firstImg from '@/assets/invite.svg';
 import secondImg from '@/assets/collect-coins.svg';
 import thirdImg from '@/assets/voucher.svg';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 const infoSections = [
   {
@@ -34,6 +35,7 @@ const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 export const HeroSection = () => {
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState('');
+  const isMobile = useMediaQuery('(max-width: 767px)');
 
   const onSubmit = (val: string) => {
     if (!val) {
@@ -78,7 +80,9 @@ export const HeroSection = () => {
               showCopy={success}
               failureText={failure}
               showButton={!success || !!failure}
-              buttonTitle={'Get Referral Link'}
+              buttonTitle={
+                isMobile && success ? 'Copy URL' : 'Get Referral Link'
+              }
             />
           </div>
           <p className={classNames(styles.footerText, pFont.className)}>

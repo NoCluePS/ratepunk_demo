@@ -5,6 +5,7 @@ import emailLogoSrc from '@/assets/email.svg';
 import successImgSrc from '@/assets/success.svg';
 import styles from './Input.module.scss';
 import { boldPFont, pFont } from '@/Fonts/Fonts';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 interface InputProps {
   showCopy: boolean;
@@ -22,6 +23,7 @@ export const Input: FC<InputProps> = ({
   failureText,
 }) => {
   const [value, setValue] = useState('');
+  const isMobile = useMediaQuery('(max-width: 767px)');
 
   const onCopy = () => {
     navigator.clipboard.writeText('https://ratepunk.com/referral');
@@ -49,14 +51,17 @@ export const Input: FC<InputProps> = ({
           contentEditable={showCopy}
           placeholder="Enter your email address"
         />
-        {showCopy && (
+        {showCopy && !isMobile && (
           <div onClick={onCopy} className={styles.copyBtn}>
             Copy
           </div>
         )}
       </div>
-      {showButton && buttonTitle && (
-        <button onClick={() => onSubmit(value)} className={styles.submitBtn}>
+      {(showButton || isMobile) && buttonTitle && (
+        <button
+          onClick={!showButton && isMobile ? onCopy : () => onSubmit(value)}
+          className={styles.submitBtn}
+        >
           {buttonTitle}
         </button>
       )}
