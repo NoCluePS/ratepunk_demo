@@ -8,8 +8,11 @@ import appleStoreImg from '@/assets/apple.svg';
 import styles from './AppDownload.module.scss';
 import { pFont } from '@/Fonts/Fonts';
 import classNames from 'classnames';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 export const AppDownload = () => {
+  const isMobile = useMediaQuery('(max-width: 767px)');
+
   return (
     <div className={styles.container}>
       <div className={styles.downloadContainer}>
@@ -42,11 +45,31 @@ export const AppDownload = () => {
       </div>
       <div className={styles.reviewsContainer}>
         <div className={styles.stars}>
-          <Star color="white" width="20px" height="20px" />
-          <Star color="white" width="20px" height="20px" />
-          <Star color="white" width="20px" height="20px" />
-          <Star color="white" width="20px" height="20px" />
-          <Star color="white" width="20px" height="20px" />
+          <Star
+            color="white"
+            width={isMobile ? '16px' : '20px'}
+            height={isMobile ? '16px' : '20px'}
+          />
+          <Star
+            color="white"
+            width={isMobile ? '16px' : '20px'}
+            height={isMobile ? '16px' : '20px'}
+          />
+          <Star
+            color="white"
+            width={isMobile ? '16px' : '20px'}
+            height={isMobile ? '16px' : '20px'}
+          />
+          <Star
+            color="white"
+            width={isMobile ? '16px' : '20px'}
+            height={isMobile ? '16px' : '20px'}
+          />
+          <Star
+            color="white"
+            width={isMobile ? '16px' : '20px'}
+            height={isMobile ? '16px' : '20px'}
+          />
         </div>
         <p className={classNames(styles.reviewText, pFont.className)}>
           Chrome Store reviews

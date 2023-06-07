@@ -5,27 +5,36 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+
     .downloadContainer {
         display: flex;
         align-items: center;
         margin-right: 32px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            margin-right: 0;
+        }
 
         .option {
             cursor: pointer;
             border: 1px solid #1F343E;
             padding: 20px 24px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             border-radius: 16px;
             color: white;
 
             &:first-child {
                 margin-right: 16px;
-            }
-
-            img {
-                margin-right: 20px;
+                @media (max-width: 767px) {
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
             }
 
             p {
@@ -35,6 +44,15 @@
             h1 {
                 font-size: 20px;
                 margin: 0;
+            }
+
+            @media (max-width: 767px) {
+                width: 100%;
+                justify-content: flex-start;
+
+                img {
+                    margin-right: 20px;
+                }
             }
         }
     }
@@ -54,6 +72,10 @@
             font-size: 20px;
             font-weight: 200;
             margin-left: 12px;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
         }
     }
 }
